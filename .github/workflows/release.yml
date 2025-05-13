@@ -20,7 +20,7 @@ jobs:
         run: |
           agvtool new-version -all $(git rev-parse HEAD)
           # Follow compilation steps from the Clip README
-          # The workspace file should be in the root directory after checkout
+          cd Clip # Navigate into the Clip project directory
           git submodule update --init --recursive
           open Clip.xcworkspace # Open the Xcode workspace
           # Note: The following steps (changing the team and building)
